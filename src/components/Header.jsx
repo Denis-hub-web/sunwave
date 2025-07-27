@@ -37,7 +37,47 @@ const Header = () => {
     >
       <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
         <a className="block w-[12rem] xl:mr-8" href="#hero">
-          <img src={brainwave} width={190} height={40} alt="Brainwave" />
+       {/*logo here */}
+          <span className="flex items-center space-x-2">
+            <svg
+              width="36"
+              height="36"
+              viewBox="0 0 36 36"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="inline-block"
+            >
+              <circle
+                cx="18"
+                cy="18"
+                r="10"
+                fill="#F59E42"
+                stroke="#DD734F"
+                strokeWidth="2"
+              />
+              {/* Sun rays */}
+              {[...Array(8)].map((_, i) => {
+                const angle = (i * 45) * (Math.PI / 180);
+                const x1 = 18 + Math.cos(angle) * 13;
+                const y1 = 18 + Math.sin(angle) * 13;
+                const x2 = 18 + Math.cos(angle) * 16;
+                const y2 = 18 + Math.sin(angle) * 16;
+                return (
+                  <line
+                    key={i}
+                    x1={x1}
+                    y1={y1}
+                    x2={x2}
+                    y2={y2}
+                    stroke="#DD734F"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                  />
+                );
+              })}
+            </svg>
+            <span className="font-bold text-xl text-[#DD734F] tracking-wide">SunWave</span>
+          </span>
         </a>
 
         <nav
@@ -67,15 +107,15 @@ const Header = () => {
           <HamburgerMenu />
         </nav>
 
-        <a
-          href="#signup"
-          className="button hidden mr-8 text-n-1/50 transition-colors hover:text-n-1 lg:block"
-        >
-          New account
-        </a>
-        <Button className="hidden lg:flex" href="#login">
-          Sign in
-        </Button>
+        <div className="hidden lg:flex flex-col mr-8">
+          <span className="font-semibold text-n-1/80 text-sm">Call us:</span>
+          <span className="font-bold text-n-1 text-base">
+            +255 (634) 567-890
+          </span>
+          <span className="font-bold text-n-1 text-base">
+            +255 (787) 654-321
+          </span>
+        </div>
 
         <Button
           className="ml-auto lg:hidden"

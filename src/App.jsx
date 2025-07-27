@@ -7,6 +7,8 @@ import Hero from "./components/Hero";
 import Pricing from "./components/Pricing";
 import Roadmap from "./components/Roadmap";
 import Services from "./components/Services";
+import Blog from "./components/Blog";
+import WhatsAppChat from "./components/WhatsAppChat";
 
 const App = () => {
   return (
@@ -17,9 +19,9 @@ const App = () => {
         <Benefits />
         <Collaboration />
         <Services />
-        <Pricing />
-        <Roadmap />
+        <Blog />
         <Footer />
+        <WhatsAppChat />
       </div>
 
       <ButtonGradient />
