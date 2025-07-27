@@ -1,5 +1,8 @@
+
+
 {
-  "name": "brainwave",
+  "homepage": "https://yourusername.github.io/sunwave",
+  "name": "sunwave",
   "private": true,
   "version": "0.0.0",
   "type": "module",
